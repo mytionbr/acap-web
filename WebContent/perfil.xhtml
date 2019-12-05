@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:composition template="#{loginBean.acesso()}">
+
+
+	<ui:define name="titulo">
+		Bem vindo
+	</ui:define>
+	<ui:define name="conteudoPrincipal">
+
+		<div
+			style="width: 100%; display: flex; align-items: center; justify-content: center;padding: ;">
+			<h:form>
+				<div style="padding:25px 20px;">
+					<p:outputLabel style="font-size: 40px !important;">Usuário logado</p:outputLabel>
+				</div>
+				<p:panelGrid columns="2">
+					<f:facet name="header">
+						<p:graphicImage library="img" name="man.png"
+							style="padding:25px 20px;" />
+					</f:facet>
+					
+					<p:outputLabel value="Nome:"
+						style="font-size: 25px !important;padding:20px;" />
+					<p:outputLabel value="#{sessionScope['usuarioLogado'].nome}"
+						style="font-size: 25px !important;padding:20px;" />
+
+					<p:outputLabel value="Email:"
+						style="font-size: 25px !important;padding:20px;" />
+					<p:outputLabel value="#{sessionScope['usuarioLogado'].usuario}"
+						style="font-size: 25px !important;padding:20px;" />
+
+					<p:outputLabel value="Cpf:"
+						style="font-size: 25px !important;padding:20px;" />
+					<p:outputLabel value="#{sessionScope['usuarioLogado'].cpf}"
+						style="font-size: 25px !important;padding:20px;" />
+
+				</p:panelGrid>
+
+			</h:form>
+		</div>
+		<br />
+
+		<div
+			style="width: 100%; display: flex; align-items: center; justify-content: center;">
+			
+
+			<h:form rendered="#{usuarioLogado != null}"
+				style="position:absolute; ">
+				<p:themeSwitcher id="basic" style="width:165px"
+					value="#{temaBean.tema}">
+					<f:selectItem itemLabel="Choose Theme" itemValue="" />
+					<f:selectItems value="#{temaBean.temas}" var="tema"
+						itemLabel="#{tema}" itemValue="#{tema}" />
+					<f:ajax />
+				</p:themeSwitcher>
+			</h:form>
+		
+		
+		</div>
+
+
+
+
+
+
+
+	</ui:define>
+</ui:composition>
+</html>

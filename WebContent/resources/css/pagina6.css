@@ -1,0 +1,173 @@
+body{
+	font-family: "Open Sans","Helvetica Neue",sans-serif;
+	height: 100%;
+}
+.header {
+	
+	background: rgb(21,54,125);
+	padding: 30px;
+}
+.header h1{
+	color: white;
+}
+.header img{
+	width: 80px;
+	height: 80px;
+}
+.header .usuario{
+	padding: 10px;
+	background: rgb(4,4,96);
+	border-radius: 10px 10px 10px 10px;
+	position: relative;
+	transition: 500ms all;
+}
+.usuario:hover{
+	box-shadow: 2px 2px 2px 2px;
+	cursor: pointer;
+	
+}
+.caixa {
+	position: relative;
+	width: 100%;
+	height: 110px;
+	margin: 0 auto;
+}
+nav {
+	position: absolute;
+	top: 3px;
+	right: 15px;
+	padding: 10px;
+}
+.titulo{
+	position: absolute;
+	left: 15px;	
+}
+.titulo h1{
+	
+}
+.main{
+	
+}
+
+	
+
+.menu{
+	
+	padding:50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+.menu .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left{
+	font-size: 20px;
+	width: 250px;
+	padding: 10px;
+
+}
+
+
+.ui-menu.ui-menu-dynamic.ui-widget.ui-widget-content.ui-corner-all.ui-helper-clearfix.ui-shadow{
+	width: 250px;
+}
+.ui-menuitem-link.ui-corner-all{
+	font-size: 16px;
+}
+.conteudo{
+	background:linear-gradient(rgb(55,55,55),rgb(30,30,30));
+	margin: 0 auto;
+	padding: 40px 0;
+
+}
+.conteudoPrincipal{
+	
+	padding: 3em 0;
+	width: 930px;
+	margin: 0 auto;
+	color: white;
+	align-items: center;
+	text-align: center;	
+}
+.footer{
+	background:linear-gradient(rgb(30,30,30),rgb(10,10,10));
+	padding: 114px 0;
+	text-align: right;
+}
+.menuPrincipal{
+	background: rgb(55,55,55);
+	width:100%;
+	
+	
+}
+.rodape{
+	font-size: 20px;
+	color: white;
+	font-style: italic;
+	margin-right: 60px; 
+}
+.componente{
+	font-size: 40px;
+}
+.ui-outputlabel.ui-widget{
+	font-size: 20px !important;
+}
+.ui-inputfield.ui-inputtext.ui-widget.ui-state-default.ui-corner-all{
+	font-size: 20px !important;
+}
+.ui-fieldset-content td{
+	background: #323232;
+	padding-top:2px;
+}
+.ui-selectonemenu-label.ui-inputfield.ui-corner-all{
+	font-size: 20px;
+}
+.ui-inputfield.ui-widget.ui-state-default.ui-corner-all.hasDatepicker{
+	font-size: 20px;
+}.
+.ui-datepicker-trigger.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only{
+	
+}
+
+#tituloPagina{
+	top: 3px;
+	font-size: 100px !important;
+	color:white;
+}
+.ui-fieldset-legend.ui-corner-all.ui-state-default{
+	font-size:20px !important;
+}
+.ui-inputfield.ui-inputmask.ui-widget.ui-state-default.ui-corner-all{
+	font-size:20px !important;
+}.ui-inputfield.ui-password.ui-widget.ui-state-default.ui-corner-all{
+	font-size:20px !important;
+}
+.grava{
+	font-size:20px !important;
+	
+}
+.ui-fieldset.ui-widget.ui-widget-content.ui-corner-all.ui-hidden-container{
+	width: 90%;
+	margin: 0 auto;
+}
+.botaoGrava{
+	padding-left: 80px;
+}
+.adiciona{
+	padding:50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	
+}
+.adicionaCarrinho{
+	width: 300px;
+	height: 90px;
+	
+}
+.adicionaCarrinho.ui-button-text.ui-c{
+	
+}
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.adicionaCarrinho{
+	font-size: 25px;
+}

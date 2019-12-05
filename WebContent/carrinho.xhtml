@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:composition template="#{loginBean.acesso()}">
+
+
+	<ui:define name="titulo">
+		Novo Carrinho
+	</ui:define>
+
+	<ui:define name="conteudo">
+
+		<h:form id="carrinho">
+
+
+			<p:messages id="mensagens" />
+			<p:fieldset legend="Dados do carrinho">
+
+				<p:panelGrid columns="2">
+
+					<p:outputLabel value="Numero de indetificação:"
+						for="indentificacao" />
+					<p:inputText id="indentificacao"
+						value="#{carrinhoBean.carrinho.numeroDeRegistro}" required="true"
+						requiredMessage="Numero de indetificação obrigatorio!!!"
+						validatorMessage="O Numero de indetificação tem que ter  6 caracteres">
+						<f:validateLength maximum="6" minimum="6" />
+						<f:ajax event="blur" render="mensagens" />
+					</p:inputText>
+					</p:panelGrid>
+					
+					
+				
+			</p:fieldset>
+			<div class="botaoGrava">
+					<p:commandButton value="Gravar" action="#{carrinhoBean.gravar}"
+						process="@form" update="@form :tabelaCadastroCarrinho" styleClass="grava">
+
+					</p:commandButton>
+					</div>
+
+
+		</h:form>
+
+		<br />
+		<br />
+
+		<h:form id="tabelaCadastroCarrinho">
+			<p:fieldset legend="Produtos já cadastrados">
+
+				<p:dataTable id="tabelaFornecedores"
+					value="#{carrinhoBean.carrinhos}" var="carrinho">
+
+
+					<p:column sortBy="#{arrinhoBean.carrinho.id}"
+						filterBy="#{carrinhoBean.carrinho.id}"
+						filterMatchMode="startsWith">
+						<f:facet name="header">ID</f:facet>
+						<h:outputText value="#{carrinho.id}">
+						</h:outputText>
+					</p:column>
+
+					<p:column sortBy="#{carrinhoBean.carrinho.numeroDeRegistro}"
+						filterBy="#{carrinhoBean.carrinho.numeroDeRegistro}"
+						filterMatchMode="startsWith">
+						<f:facet name="header">Numero de registro</f:facet>
+						<h:outputText value="#{carrinho.numeroDeRegistro}" />
+					</p:column>
+
+					<p:column>
+						<f:facet name="header">Alterar</f:facet>
+						<p:commandLink value="alterar"
+							action="#{carrinhoBean.carrega(carrinho)}"
+							update=":carrinho" />
+					</p:column>
+
+					<p:column>
+						<f:facet name="header">Remover</f:facet>
+						<p:commandLink value="alterar"
+							action="#{carrinhoBean.remover(carrinho)}"
+							update=":carrinho" />
+					</p:column>
+
+					
+				</p:dataTable>
+			</p:fieldset>
+		</h:form>
+
+
+
+
+	</ui:define>
+
+
+</ui:composition>
+
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+	<link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/resources/css/login.css" media="screen" />  
+	</h:head>
+<body>
+<div><p:growl id="messages" showDetail="true" /></div>
+
+
+	<div class="login" onmouseenter="paginacao1()"
+		onmouseleave="paginacao2()">
+
+		<h:graphicImage library="img" name="man2.png" class="usuario"
+			width="120" height="120" />
+		<div class="pagina2">
+			<h1 class="pagina2">Login</h1>
+		</div>
+		<h1 class="pagina1">ACAP</h1>
+		<div class="pagina2">
+			<h:form>
+				
+				<p>Usuário</p>
+
+				<p:inputText id="login" value="#{loginBean.funcionario.usuario}"
+					required="true" requiredMessage="Login obrigatorio">
+					<f:attribute name="type" value="email" />
+					<f:passThroughAttribute name="placeholder" value="Email" />
+					<f:validateRegex pattern=".+@.+" />
+					<f:ajax event="blur" render="messageEmail" />
+
+				</p:inputText>
+
+				<p:message for="login" id="messageEmail" />
+
+
+
+				<p>Senha</p>
+
+				<p:password id="senha" value="#{loginBean.funcionario.senha}"
+					required="true" requiredMessage="Senha obrigatoria!!!">
+					<f:passThroughAttribute name="placeholder" value="Senha" />
+				</p:password>
+				<p:message for="senha" id="messageSenha" />
+
+				<p:commandButton value="Entrar" action="#{loginBean.entrar}"
+					update="@form" process="@form" />
+			</h:form>
+		</div>
+	</div>
+</body>
+<h:outputScript library="js" name="login.js" />
+</html>

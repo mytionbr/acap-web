@@ -1,0 +1,133 @@
+
+body {
+
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url(fundo12.jpg);
+	background-repeat: repeat-x,repeat-x;
+	background-size: cover;
+	transition: 1s all;
+	}
+
+.body:hover{
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+}
+.logo{
+	top: 30%;
+	left: 15%;
+	position: absolute;
+	transition: 0.4s all;
+}
+.logo:hover{
+	transform: scale(1.1);
+
+
+
+}
+.login {
+	width: 320px;
+	height: 420px;
+	border: 2px solid #000;
+	color: #fff;
+	background-color: rgba(0,0,5,0.8);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 68px 28px; 
+	transition: 0.8s all;
+	opacity: 0.9;
+
+
+}
+
+.login:hover{
+	opacity: 1;
+	width: 325px;
+	height: 435px;
+
+
+}
+.usuario {
+	border-radius: 50%;
+	position: absolute;
+	top: -70px;
+	left: 100px;
+}
+
+h1 {
+	margin: 0;
+	padding-top: 0;
+	padding-left: 0;
+	padding-bottom: 20px;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 25px;
+}
+
+.login p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.login input {
+	width: 100%;
+	margin-bottom: 21px; 
+}
+
+
+.login input[type="email"], input[type="password"] {
+	outline: none;
+	height: 40px;
+	font-size: 16px;
+}
+
+.login button {
+	border: none;
+	outline: none;
+	height: 45px;
+	border-radius: 10px;
+	font-weight: bold;
+	margin-top: 25px: 
+	margin-bottom: 21px; 
+	width: 100%;
+}
+/*
+.login button:hover {
+	cursor: pointer;
+	font-size: 20px;
+
+}*/
+
+
+.fadeOut {
+    opacity: 0;
+    transition: 0.8s;
+}
+.invisivel{
+	display: none;
+
+}
+.pagina1{
+	margin: 0;
+	padding-top: 0;
+	padding-left: 0;
+	margin-top: 40%;
+	padding-bottom: 20px;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 50px;
+}
+#mensagem{
+	width: 200px;
+	padding:20px;
+}
+
+

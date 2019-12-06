@@ -147,9 +147,10 @@ public class CaixaBean {
 				if (produto.getId() == produtoLista.getId()) {
 					produto.setQtd(produto.getQtd() - 1);
 				}
+				dao.salvarProduto(produto);
 			}
 		}
-		dao.salvarProduto(produto);
+		
 
 		compra = new Compra();
 		preçoFinal = 0;
@@ -171,7 +172,7 @@ public class CaixaBean {
 		Scanner scanner;
 		try {
 			scanner = new Scanner(new FileReader("C:/Users/Lari Sousa/Desktop/teste/produtos.txt"))
-					.useDelimiter(",||,n");
+					.useDelimiter(",");
 			while (scanner.hasNext()) {
 				String nome = scanner.next();
 				System.out.println(nome);

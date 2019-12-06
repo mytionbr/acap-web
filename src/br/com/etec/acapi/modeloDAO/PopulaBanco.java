@@ -145,7 +145,7 @@ public class PopulaBanco {
 		produtos.add(produto1);
 		produtos.add(produto2);
 		produtos.add(produto3);
-		carrinho1.setProdutos(produtos);
+		
 		carrinho1.setNumeroDeRegistro(12345);
 
 		Carrinho carrinho2 = new Carrinho();
@@ -157,10 +157,9 @@ public class PopulaBanco {
 		produtos1.add(produto2);
 		produtos1.add(produto4);
 		produtos1.add(produto5);
-		produtos1.add(produto6);
-		produtos1.add(produto7);
+	
 		
-		carrinho2.setProdutos(produtos1);
+		
 		carrinho2.setNumeroDeRegistro(12344);
 
 		Carrinho carrinho3 = new Carrinho();
